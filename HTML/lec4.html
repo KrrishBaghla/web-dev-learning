@@ -1,0 +1,431 @@
+```html
+<!DOCTYPE html>
+
+<!--
+    <!DOCTYPE html>
+    Tells the browser that this document uses HTML5.
+-->
+
+<html lang="en">
+
+<!--
+    <html> is the root element of the entire HTML document.
+
+    lang="en" tells the browser/search engines that
+    the main language of the page is English.
+-->
+
+<head>
+
+    <!-- Character encoding: supports most characters and symbols -->
+    <meta charset="UTF-8">
+
+    <!--
+        Makes the webpage responsive.
+
+        width=device-width
+        → Page width matches the device width.
+
+        initial-scale=1.0
+        → Normal zoom level when the page loads.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text shown on the browser tab -->
+    <title>Theories</title>
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         DEBUGGING HTML CODE
+         ===================================================== -->
+
+    <!--
+        <p> = Paragraph
+
+        Everything written between <p> and </p>
+        becomes one paragraph.
+    -->
+
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Temporibus quod officia, quam quo, consequatur architecto
+        veniam nisi sunt pariatur soluta quia. Explicabo accusamus
+        illo asperiores non vitae, quos dolorum velit.
+    </p>
+
+
+    <!--
+        <strong> = Strong importance
+        Usually displayed as bold.
+
+        <em> = Emphasis
+        Usually displayed as italic.
+
+        IMPORTANT:
+        HTML elements must be properly nested.
+
+        ❌ Wrong:
+
+        <strong>
+            <em>
+        </strong>
+        </em>
+
+        The <em> tag was opened inside <strong>,
+        so <em> should be closed first.
+    -->
+
+    <!-- Correct nesting -->
+    <strong>
+        content here
+        <em>Strong emphasized</em>
+        what is this?
+    </strong>
+
+
+    <!--
+        <br> = Line break
+
+        It does NOT need a closing tag.
+
+        Two <br> tags = two line breaks.
+    -->
+
+    <br>
+    <br>
+
+
+    <!--
+        Another example of correct nesting.
+
+        <em> is opened inside <strong>,
+        so <em> is closed before <strong>.
+    -->
+
+    <strong>
+        content here
+        <em>Strong emphasized</em>
+        what is this?
+    </strong>
+
+
+    <!-- =====================================================
+         HTML5 APIs
+         =====================================================
+
+         APIs allow JavaScript to interact with browser features.
+
+         1. Geolocation API
+            → Can access the user's geographical location.
+
+         2. Web Storage API
+            → Allows data to be stored in the browser.
+
+    -->
+
+
+    <!-- =====================================================
+         FRAMES / IFRAME
+         ===================================================== -->
+
+
+    <!--
+        An <iframe> embeds another webpage/resource
+        inside the current webpage.
+
+        Your original example:
+
+        <iframe src="video.mp4"
+                frameborder="0"
+                height="400px"
+                width="500px">
+        </iframe>
+
+        frameborder is an old/deprecated attribute,
+        so it is better avoided in modern HTML.
+    -->
+
+    <!--
+    <iframe src="video.mp4"
+            frameborder="0"
+            height="400px"
+            width="500px">
+    </iframe>
+
+    <a href="video.mp4">Video</a>
+    -->
+
+
+    <!--
+        Here we create an iframe.
+
+        name="myframe" is important.
+
+        It gives the iframe a name that can be used
+        as the target of an <a> link.
+    -->
+
+    <iframe
+        height="600"
+        width="600"
+        name="myframe">
+    </iframe>
+
+    <br>
+
+
+    <!--
+        <a> = Anchor/link
+
+        href="video.mp4"
+        → Specifies WHAT should be opened.
+
+        target="myframe"
+        → Specifies WHERE it should be opened.
+
+        Since our iframe has:
+
+        name="myframe"
+
+        the video will open INSIDE the iframe.
+    -->
+
+    <a href="video.mp4" target="myframe">
+        Video
+    </a>
+
+
+    <!-- Same link again -->
+    <a href="video.mp4" target="myframe">
+        Video
+    </a>
+
+
+    <!--
+        This time the image is opened inside the iframe.
+
+        href
+        → points to the image.
+
+        target
+        → tells the browser to display it inside
+          the iframe named "myframe".
+    -->
+
+    <a href="memories-Logo.png" target="myframe">
+        Image
+    </a>
+
+
+    <!-- =====================================================
+         DEPRECATED ELEMENTS
+         =====================================================
+
+         These are old HTML elements.
+
+         They are shown here for learning/revision,
+         but should NOT normally be used in modern HTML.
+
+         CSS is generally used instead.
+    -->
+
+
+    <!--
+        <center> was used to center content.
+
+        Old HTML:
+
+        <center>
+            A centered content
+        </center>
+
+        Modern HTML uses CSS:
+
+        style="text-align: center;"
+    -->
+
+    <!--
+    <center>
+        A centered content
+    </center>
+    -->
+
+    <br>
+
+
+    <!--
+        <font> was used to control:
+
+        - size
+        - color
+        - font
+
+        Example of the old syntax:
+
+        <font size="4" color="red">
+            This is red styled
+        </font>
+
+        Modern HTML uses CSS instead.
+    -->
+
+    <!--
+    <font size="4" color="red">
+        This is red styled
+    </font>
+    -->
+
+    <br>
+
+
+    <!--
+        <strike> was used to display
+        text with a line through it.
+
+        Old:
+
+        <strike>
+            This content is struck through
+        </strike>
+
+        Modern HTML can use <s> or CSS.
+    -->
+
+    <!--
+    <strike>
+        This content is struck through
+    </strike>
+    -->
+
+
+    <br>
+
+
+    <!--
+        <big> was used to make text bigger.
+
+        It is obsolete/deprecated.
+
+        Modern HTML uses CSS:
+
+        font-size: larger;
+    -->
+
+    <!--
+    <big>
+        Big
+    </big>
+    -->
+
+
+    <br>
+
+
+    <!--
+        <small> makes text smaller.
+
+        Unlike <big>, <small> is still a valid
+        HTML element.
+    -->
+
+    <small>
+        Small
+    </small>
+
+
+    <!--
+        <frame> and <frameset>
+
+        These belonged to the old HTML frame system.
+
+        They are obsolete in HTML5.
+
+        They are NOT the same as <iframe>.
+
+        <iframe> → still exists
+        <frame>  → obsolete
+        <frameset> → obsolete
+    -->
+
+    <!--
+    <frame>
+    </frame>
+
+    <frameset>
+    </frameset>
+    -->
+
+
+    <br>
+
+
+    <!--
+        <applet>
+
+        Used in old websites to embed Java applets.
+
+        Java applets are no longer supported
+        by modern browsers.
+
+        Therefore <applet> is obsolete.
+    -->
+
+    <!--
+    <applet>
+    </applet>
+    -->
+
+
+    <!-- =====================================================
+         WEB STORAGE
+         =====================================================
+
+         Web Storage allows JavaScript to store
+         data inside the user's browser.
+
+         There are TWO types:
+
+         1. localStorage
+         2. sessionStorage
+
+
+         localStorage
+         ------------
+         i.   Data persistence
+         ii.  Scope
+         iii. Storage limit
+         iv.  Usage
+
+
+         sessionStorage
+         --------------
+         i.   Data persistence
+         ii.  Scope
+         iii. Storage limit
+         iv.  Usage
+
+    -->
+
+
+    <!--
+        These <br> tags simply create empty space.
+
+        They don't contain any content.
+    -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</body>
+
+</html>
+```
